@@ -12,7 +12,7 @@ def statement_generator(text, decoration):
 
     print()
     print(statement)
-    print()
+    
 
     return ""
 
@@ -28,6 +28,7 @@ def user_choice():
     while not valid:
 
         # ask user for choice and change respsonse to lowercase
+        print()
         response =  input("File type (integer / text / image): ").lower()
 
         #checks for valid response and returns text, integer, or image
@@ -60,8 +61,8 @@ def num_check (question, low):
     valid = False
     while not valid:
 
-        error = "Please enter a number that is more than (or equal to {}".format(low)
-        
+        error = "please enter an integer that is more than or equal to {}".format(low)
+        error_2 = "please enter an integer"
         try:
             
             # ask user to enter a number
@@ -78,7 +79,8 @@ def num_check (question, low):
                 print()
         
         except ValueError:
-            print(error)
+            print(error_2)
+            print()
 
 # Main routine goes here
 
@@ -94,6 +96,7 @@ while keep_going=="":
 
     # Ask the user for the file type
     data_type = user_choice()
+    print()
     print ("You chose", data_type)
 
     # For integers, ask for integer
