@@ -16,6 +16,18 @@ def statement_generator(text, decoration):
 
     return ""
 
+# Displays instructions / information
+def instructions():
+
+    statement_generator("Instructions / Information", "=")
+    print()
+    print("Please choose a data type (image / text / integer)")
+    print()
+    print("This program assumes that images are being represented in 24 bit colour (ie: 24 bits per pixel). for text, we assume that ascii encoding is being used (8 bits per character)")
+    print("Complete as many calculations as necessary, press <enter> at the end of each calculation, or any key to quit.")
+    print()
+    return ""
+
 # Checks if user choice is 'integer', 'text', or 'image'
 def user_choice():
 
@@ -53,7 +65,6 @@ def user_choice():
             #if response is not valid, output an error
             print("Please choose a valid file type!")
             print()
-
 
 # Checks if input is a number more than a given value
 def num_check (question, low):
