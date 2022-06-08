@@ -159,11 +159,16 @@ def int_bits():
 
 
 # Heading
-statement_generator("hello world", "-")
+statement_generator("Bit Calculator", "-")
 
 # Display instructions if user has not used the program before
+first_time = input("press <enter> to see instructions or any key to continue: ")
+
+if first_time == "":
+    instructions()
 
 # Loop to allow multiple calculations per session
+
 keep_going = ""
 while keep_going=="":
 
